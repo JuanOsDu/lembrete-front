@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css", href="style.css">
+</head>
+<body>
+    <form class="crear-l"  action="./lembrete.html">
+        <input class="button-53" type="submit" value="Back" />
+    </form>
+    <form class="form" action="lembrete.html"  onsubmit="addLembrete()">
+        <input class="fElement" type="text" placeholder="Title" id="title"><br>
+        <textarea placeholder="Description" class="fElement" type="date" id="description"></textarea><br>
+        <input type="hidden" value="" id="ip">
+        <input class="fElement" type="date" id="date"><br>
+        <input type="submit"  class="fElement" > </input>
+    </form> 
+
+</body>
+<script src="./script.js"></script>
+  <script>
+    function recordData (data) {
+      let e =document.getElementById('ip')
+      e.value = data.country
+    }
+  </script>
+  <script src="https://ipinfo.io/json?callback=recordData"></script>
+</html>
